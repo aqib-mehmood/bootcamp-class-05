@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import DemoContext from './DemoContext';
 
-function Child(props) {
+function Child() {
+    let childval = useContext(DemoContext);
   return (
-  <h1>Child Number is = {props.childnum}</h1>
+  <h1>Child Number is = {childval}</h1>
     
   );
 }

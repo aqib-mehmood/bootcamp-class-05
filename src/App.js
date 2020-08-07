@@ -1,18 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import Child from './Child';
 import Parent from './Parent';
+import DemoContext from './DemoContext';
 
 function App() {
 
-  let [num, setNum] = useState(21);
+  //let [num, setNum] = useState(21);
+
+  let val=40;
 
   return (
-    <div>
+    <DemoContext.Provider value={val}>
+      <div>
         <h1>App hello world</h1>
-        <Parent number = {num} > </Parent>
-        <button onClick={() => setNum(++num)}>Increase Number</button>
+        <Parent></Parent>
     </div>
+    </DemoContext.Provider>
   );
 }
 
