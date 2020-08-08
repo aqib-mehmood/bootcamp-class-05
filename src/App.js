@@ -11,7 +11,7 @@ function App() {
     <div>
         <h1>App hello world</h1>
         <Parent number = {num} > </Parent>
-        <button onClick={() => setNum(++num)}>Increase Number</button>
+        
     </div>
   );
 }
